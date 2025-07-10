@@ -1,5 +1,5 @@
 const countdown = () => {
-  const target = new Date("2025-08-23T00:00:00").getTime();
+  const target = new Date("2025-10-20T00:00:00").getTime();
   const now = new Date().getTime();
   const diff = target - now;
 
