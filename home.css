@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(170deg, #00050b, #4f010e);
+  background: linear-gradient(180deg,  #0A0A0A, #4f010e);
   color: white;
   overflow: hidden;
   height: 100vh;
@@ -11,55 +11,73 @@ body {
   align-items: center;
 }
 
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
+}
+
 .container {
   text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 h1 {
-  font-size: 2.2rem;
-  line-height: 1.1;
+  font-size: 1.75rem;
+  line-height: 0.1;
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-top: 5px;
+  margin-bottom: 1px;
 }
 
-h1 span {
-  font-weight: bold;
-  color: #23ecb3;
+h2 {
+  font-size: 2.5rem;
+  line-height: 0%;
+  color: #ff0000;
+  margin-bottom: 40px;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .countdown div {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(119, 11, 221, 0.05);
   padding: 15px 20px;
   border-radius: 10px;
-  color: #23ecb3;
+  color: 	#ff0000;
   box-shadow: 0 0 20px ;
 }
 
 .countdown span {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #23ecb3;
+  color: 	#ffbf00;
   text-shadow: 0 0 15px ;
 }
 
 .countdown p {
   font-size: 0.9rem;
   margin: 5px 0 0;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .launch-date {
   font-size: 1rem;
   color: #ffffff;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 @media (max-width: 600px) {
