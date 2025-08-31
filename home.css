@@ -4,7 +4,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(180deg,  #0A0A0A, #4f010e);
   color: white;
-  overflow: hidden;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -94,3 +93,4 @@ h2 {
     font-size: 1.5rem;
   }
 }
+
