@@ -272,8 +272,8 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.75rem;
-      color: var(--text-white); /* Updated: Pure white to match social links */
-      font-weight: 500; /* Updated: Weight 500 to match social links */
+      color: var(--text-white); /* Pure white to match social links */
+      font-weight: 500; /* Weight 500 to match social links */
       /* Ensures footer is at bottom */
       margin-top: auto; 
     }
@@ -364,6 +364,8 @@
           <input
             type="email"
             id="emailInput"
+            name="email"
+            autocomplete="email"
             placeholder="Enter your email address"
             required
             aria-label="Email Address"
@@ -456,7 +458,23 @@
         .then(() => {
           form.style.display = "none";
           document.querySelector(".cta-text").style.display = "none";
-          msg.innerHTML = `<span style="color: #D4AF37; font-size: 1.1rem;">Welcome.</span><br><span style="color:#bbb; font-size:0.9rem">We will notify ${email} soon.</span>`;
+          
+          // --- SECURITY FIX: Use safe DOM creation instead of innerHTML injection ---
+          msg.innerHTML = ''; // Clear previous content
+          
+          const welcomeSpan = document.createElement('span');
+          welcomeSpan.style.cssText = "color: #D4AF37; font-size: 1.1rem;";
+          welcomeSpan.textContent = "Welcome.";
+          
+          const br = document.createElement('br');
+          
+          const notifySpan = document.createElement('span');
+          notifySpan.style.cssText = "color:#bbb; font-size:0.9rem";
+          notifySpan.textContent = `We will notify ${email} soon.`;
+          
+          msg.appendChild(welcomeSpan);
+          msg.appendChild(br);
+          msg.appendChild(notifySpan);
         })
         .catch(() => {
           btn.disabled = false;
