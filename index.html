@@ -13,7 +13,7 @@
   <meta property="og:image" content="Moksh_Logo.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  
+   
   <title>Moksh - The Stage is Set</title>
 
   <!-- Favicon -->
@@ -310,6 +310,11 @@
 
     /* --- MOBILE RESPONSIVE --- */
     @media (max-width: 600px) {
+      /* FIX: Prevent background snap on mobile scroll by resetting attachment */
+      body {
+        background-attachment: scroll;
+      }
+      
       h1 { font-size: 1.8rem; } 
       .waitlist-form button, input[type="email"] { width: 100%; max-width: 280px; } 
       .content-wrapper { padding: 0 10px; }
